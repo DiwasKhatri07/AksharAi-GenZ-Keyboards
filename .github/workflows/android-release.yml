@@ -1,0 +1,79 @@
+name: Android release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing version tag to publish (for example, v0.014)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out selected tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+
+      - name: Validate release tag
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+(\.[0-9]+)?$ ]] || { echo 'Tag must look like v0.014 or v1.2.3.' >&2; exit 1; }
+          VERSION_NAME=$(sed -n 's/^[[:space:]]*versionName = "\([^"]*\)"/\1/p' app/build.gradle.kts)
+          [[ "$VERSION_NAME" == "$RELEASE_TAG" ]] || { echo "Tag $RELEASE_TAG does not match app version $VERSION_NAME." >&2; exit 1; }
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install compile SDK
+        run: sdkmanager 'platforms;android-36.1' 'build-tools;36.0.0'
+
+      - name: Configure signing key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_RELEASE_KEYSTORE_BASE64 }}
+        run: |
+          test -n "$KEYSTORE_B64" || { echo 'Set ANDROID_RELEASE_KEYSTORE_BASE64 in repository Actions secrets.' >&2; exit 1; }
+          echo "$KEYSTORE_B64" | base64 --decode > "$RUNNER_TEMP/akshar-upload-key.jks"
+          chmod 600 "$RUNNER_TEMP/akshar-upload-key.jks"
+
+      - name: Build APKs
+        env:
+          KEYSTORE_PATH: ${{ runner.temp }}/akshar-upload-key.jks
+          STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          test -n "$STORE_PASSWORD" && test -n "$KEY_PASSWORD"
+          ./gradlew testDebugUnitTest --tests com.example.ExampleUnitTest assembleDebug assembleRelease
+
+      - name: Prepare checksums
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          mkdir -p release-assets
+          cp app/build/outputs/apk/release/app-release.apk "release-assets/AksharAI-GenZ-Keyboards-${RELEASE_TAG}-release.apk"
+          cp app/build/outputs/apk/debug/app-debug.apk "release-assets/AksharAI-GenZ-Keyboards-${RELEASE_TAG}-debug.apk"
+          (cd release-assets && sha256sum ./*.apk > SHA256SUMS.txt)
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          gh release create "$RELEASE_TAG" release-assets/* \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Akshar AI - GenZ Keyboards $RELEASE_TAG" \
+            --notes "See the README and ANDROID_RELEASE.md. Verify APK files with SHA256SUMS.txt. The release APK is the optimized install build; the debug APK is for testing."

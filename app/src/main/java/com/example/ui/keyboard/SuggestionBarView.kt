@@ -281,7 +281,7 @@ fun SuggestionBarView(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = "Aayo Keyboard ✨ Smart Typing",
+                        text = "Akshar AI ✨ Smart Typing",
                         color = theme.keySubTextColor.copy(alpha = 0.6f),
                         fontSize = 12.sp
                     )

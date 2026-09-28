@@ -76,13 +76,13 @@ fun AboutPrivacyScreen(modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(12.dp))
 
                 Text(
-                    text = "Aayo Keyboard",
+                    text = "Akshar AI - GenZ Keyboards",
                     fontSize = 22.sp,
                     fontWeight = FontWeight.ExtraBold,
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
-                    text = "Version 1.0.0 • Modern Nepali Gen-Z AI IME",
+                    text = "Version v0.013 • Modern Nepali Gen-Z AI IME",
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -154,26 +154,26 @@ fun AboutPrivacyScreen(modifier: Modifier = Modifier) {
             ) {
                 PrivacyItem(
                     icon = Icons.Default.Lock,
-                    title = "100% On-Device Typing",
-                    description = "Normal keystrokes, suggestions, transliteration, and dictionary words are processed strictly on your local device. We never keylog or stream your typing."
+                    title = "On-Device Typing Tools",
+                    description = "Normal suggestions, transliteration, and dictionary tools run on your device. Optional AI and Android voice-recognition services may use the network."
                 )
 
                 PrivacyItem(
                     icon = Icons.Default.Shield,
-                    title = "Password & OTP Shield",
-                    description = "When typing into password or sensitive financial fields, AI features, suggestions, and learning are automatically deactivated."
+                    title = "Password-Field Safeguards",
+                    description = "Android-recognized password fields suppress suggestions and clipboard capture. Other sensitive fields may not be detected; avoid sharing confidential text with AI."
                 )
 
                 PrivacyItem(
                     icon = Icons.Default.Security,
                     title = "User-Initiated AI Only",
-                    description = "No text is ever sent to AI services in the background. AI transformations only execute when you explicitly tap the AI action button."
+                    description = "An AI transformation starts only when you tap an AI action. If a provider key is configured, selected text may be sent to Groq or Google Gemini over HTTPS."
                 )
 
                 PrivacyItem(
                     icon = Icons.Default.Lock,
                     title = "Local Clipboard Management",
-                    description = "Copied text clips stay safely in your private Room database with configurable auto-deletion timers (e.g. 1 hour, 24 hours, 7 days)."
+                    description = "Clipboard entries are stored in the app's local Room database. Choose a retention period or clear entries in the Clips panel; local Android backup settings may also apply."
                 )
             }
         }

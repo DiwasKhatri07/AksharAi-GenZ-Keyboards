@@ -1,145 +1,120 @@
-# Akshar Ai - GenZ Keyboards 🇳🇵✨
+# Akshar AI - GenZ Keyboards 🇳🇵
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.0+-7F52FF.svg?logo=kotlin&logoColor=white)](https://kotlinlang.org)
-[![Android](https://img.shields.io/badge/Platform-Android_8.0+_(API_26+)-3DDC84.svg?logo=android&logoColor=white)](https://developer.android.com)
-[![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack_Compose_M3-4285F4.svg?logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/diwaskhatri07)
+**A Nepali Gen-Z keyboard for Nepali, Nepinglish and English—with on-device typing tools and optional AI writing assistance.** Built in Nepal by [Diwas Khatri](https://github.com/DiwasKhatri07).
 
-> **Akshar Ai - GenZ Keyboards** is a lightning-fast, production-ready Android Input Method Editor (IME) tailored for **Nepali Devanagari**, **Nepinglish (Roman Nepali)**, and **English** typing. Packed with gesture swipe typing, contextual sentiment emoji recommendations, on-device transliteration, dual-engine AI writing (Groq LLaMA 3.1 & Google Gemini), iOS quick editing tools, tactile haptics, and privacy-first local storage.
+<p align="center">
+  <a href="https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/releases/latest"><img src="https://img.shields.io/github/v/release/DiwasKhatri07/AksharAi-GenZ-Keyboards?display_name=tag&label=latest%20release" alt="Latest release"></a>
+  <a href="https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/releases"><img src="https://img.shields.io/github/downloads/DiwasKhatri07/AksharAi-GenZ-Keyboards/total?label=APK%20downloads" alt="Release downloads"></a>
+  <a href="https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/actions/workflows/android-ci.yml"><img src="https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/actions/workflows/android-ci.yml/badge.svg" alt="Android CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/DiwasKhatri07/AksharAi-GenZ-Keyboards" alt="MIT License"></a>
+  <a href="https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/stargazers"><img src="https://img.shields.io/github/stars/DiwasKhatri07/AksharAi-GenZ-Keyboards?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/network/members"><img src="https://img.shields.io/github/forks/DiwasKhatri07/AksharAi-GenZ-Keyboards?style=social" alt="GitHub forks"></a>
+</p>
 
-Developed with ❤️ by **Diwas Khatri** ([@diwaskhatri07](https://github.com/diwaskhatri07)).
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20in-Nepal-DC143C?style=for-the-badge" alt="Made in Nepal">
+  <img src="https://img.shields.io/badge/Android-API%2024%2B-3DDC84?logo=android&logoColor=white" alt="Android API 24 and newer">
+  <img src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin and Jetpack Compose">
+  <img src="https://img.shields.io/badge/Languages-Nepali%20%7C%20Nepinglish%20%7C%20English-2563EB" alt="Nepali, Nepinglish and English">
+</p>
 
----
+> **Discoverability:** An open-source Android Nepali keyboard, Nepali typing app, Devanagari keyboard, Roman Nepali (Nepinglish) keyboard and Gen-Z AI keyboard. GitHub topics are listed below. GitHub controls search ranking; no ranking is guaranteed.
 
-## 🌟 Highlights & Features
+## Showcase
 
-### 1. Real Android System Input Method Editor (IME)
-- Conforms to Android `InputMethodService` specifications for seamless system-wide input.
-- Works across all apps: WhatsApp, Instagram, TikTok, Chrome, Telegram, YouTube, and Notes.
-- Automatic **Password & OTP Shielding**: When focused on password or numeric PIN fields, autocorrect, predictive caching, and AI toolbars are immediately turned off for user privacy.
+Screenshots are from the supplied app build. Search-history captures were deliberately not included in the public gallery.
 
-### 2. Gesture-Based Swipe Typing Recognition
-- Maps user drag trajectories across keys using real-time spatial path sampling and edit distance algorithms.
-- **Dual-Script Prediction**: Swiping English letters (e.g. `n-a-m-a-s-t-e` or `d-a-m-i`) automatically outputs both Nepinglish (`namaste`, `dami`) and native Devanagari (`नमस्ते`, `दामी`).
-- Vivid glowing neon gesture trail with smooth quadratic Bézier curves that fade smoothly upon release.
+<p align="center">
+  <img src="docs/assets/genz-ai-playground.jpg" alt="Akshar AI Gen-Z writing assistant with selectable transformation modes" width="220">
+  <img src="docs/assets/theme-modern-dark.jpg" alt="Modern Dark keyboard theme with Nepinglish and Devanagari suggestions" width="220">
+  <img src="docs/assets/theme-ios-blue.jpg" alt="iOS Clean Blue keyboard theme preview" width="220">
+</p>
+<p align="center">
+  <img src="docs/assets/smart-typing-settings.jpg" alt="Smart suggestions, autocorrect, number row, cursor swipe, and haptic settings" width="220">
+  <img src="docs/assets/about-privacy.jpg" alt="About screen and in-app privacy policy" width="220">
+</p>
 
-### 3. Smart Nepali & Nepinglish Engine
-- **Devanagari Layout**: Full consonants, vowels, halanta (्), nukta, matras, and native numbers (०..९).
-- **Intelligent Transliteration**: Sub-millisecond rule-based engine converting Roman input (`kasto`, `sanchai`, `hajur`, `mero`, `khana`, `nepal`) into clean Devanagari.
-- **Nepinglish Autocorrect & Normalization**: Automatically repairs slang abbreviations (`xa` → `cha`, `tmi` → `timi`, `garxu` → `garchu`, `xaina` → `chaina`).
-- **Gen-Z Slang Dictionary**: Built-in support for popular youth vernacular (`babaal`, `khatra`, `sahii`, `vibe`, `chill`, `sigma`, `based`, `solti`, `momo`, `chiya`).
+**Video:** [Watch the submitted keyboard screen recording](docs/assets/akshar-keyboard-demo.mp4). It includes a browser page with an account identifier; see [showcase notes](docs/showcase.md).
 
-### 4. Lightweight On-Device Sentiment Emoji Strip
-- Real-time sentence sentiment classifier running locally without network overhead.
-- Identifies emotions (Celebration/Fire 🔥, Love ❤️, Laughter 😂, Cool/Sigma 🗿, Respect 🙏, Hangout ☕) and surfaces instant one-tap reaction emojis in a dedicated strip.
+## Features
 
-### 5. Multi-Provider AI Writing Assistant
-- **12 Writing Modes**: Rewrite, Expand, Shorten, Grammar Correction, Translate (Nepali ↔ English), Emojify, Gen-Z, Funny, Professional, Casual, Sigma/Chad, and AI Reply Generator.
-- **Dual Provider Support**:
-  - **Groq Cloud**: Ultra-low latency `llama-3.1-8b-instant`.
-  - **Google Gemini**: High quality `gemini-2.5-flash`.
-- **Fail-Safe Offline Mode**: If offline or if API keys are omitted, an on-device rule engine takes over seamlessly so the app **never crashes**.
+- **Three typing modes:** Nepali Devanagari, Nepinglish/Roman Nepali and English QWERTY.
+- **Nepali transliteration:** Convert Romanized input into Devanagari and switch language modes from the keyboard.
+- **Gen-Z suggestions:** Nepinglish normalization, slang vocabulary, autocorrect, contextual emoji suggestions and a three-slot suggestions bar.
+- **Gesture typing:** Swipe typing with dual-script candidates and spacebar cursor navigation.
+- **Optional AI writing assistant:** 17 modes, including Gen-Z style, translation, grammar fixes, respectful/professional rewrites, captions and smart replies. Cloud requests use a configured Groq or Gemini key; local rule-based transformations provide a fallback.
+- **Keyboard customization:** Curated themes, key size/corner controls, number row, haptics, sound and autocorrect options.
+- **Everyday tools:** Local clipboard panel, voice typing through Android's selected recognition service, emoji suggestions and text-to-speech.
+- **Sensitive-field safeguards:** Android-recognized password fields suppress keyboard learning and sensitive actions. The AI tool also blocks some numeric PIN/OTP/card-like patterns; these heuristics are not a substitute for avoiding confidential text.
 
-### 6. Privacy-First Local Clipboard & Utilities
-- Stores up to 10 recent clips locally in an isolated SQLite Room database.
-- Pin favorite messages, single-tap paste, and clear unpinned clips.
-- iOS-style floating blue action bar for instant Select All, Copy, Cut, and Paste.
-- Spacebar cursor drag navigation for precision editing.
-- Built-in Voice Typing (`SpeechRecognizer`) and Nepali/English Text-to-Speech (TTS).
+## Download
 
----
+The latest APKs and checksums are on the **[Releases page](https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/releases/latest)**. The current release is **v0.013**.
 
-## 🏗️ Architecture Overview
+| File | Use |
+| --- | --- |
+| `AksharAI-GenZ-Keyboards-v0.013-release.apk` | Optimized, signed release for normal installation. |
+| `AksharAI-GenZ-Keyboards-v0.013-debug.apk` | Larger debug build for testing and troubleshooting. |
 
+The APKs use the same application ID but different signing certificates, so Android cannot keep both variants installed side by side. Uninstall one before switching; local app data may be removed. The release signing key is intentionally **not** included in this public repository.
+
+## How it fits together
+
+- `app/src/main/java/com/example/ime/` implements the Android `InputMethodService` and text-editor integration.
+- `engine/nepali/`, `engine/nepinglish/`, `engine/prediction/`, `engine/swipe/` and `engine/emoji/` contain the local language, suggestion and gesture logic.
+- `ui/keyboard/` implements the keyboard surfaces; `ui/screens/` contains setup, theme, settings, clips, AI and privacy screens.
+- `data/local/` stores Room entities/queries; `data/preferences/` holds language, layout and feature settings.
+- `ai/` routes optional transformations to Groq/Gemini and provides the local fallback. User API keys are never committed.
+
+`Android CI` runs focused JVM tests and builds the debug APK on app-code changes. The repository-metrics job is separately scheduled; see [GitHub metrics](docs/github-metrics.md).
+
+## Install and enable
+
+1. Download the release APK from [Releases](https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/releases/latest) and install it. Android may ask you to allow installs from that browser/file manager.
+2. Open **Settings → System → Languages & input → On-screen keyboard → Manage keyboards** (menu names differ by device).
+3. Enable **Akshar AI GenZ Keyboard**, then select it from the keyboard picker in any text field.
+
+A keyboard can process text typed into other apps. Review the [privacy policy](PRIVACY.md) before enabling it, and install keyboards only from sources you trust.
+
+## Build from source
+
+**Requirements:** JDK 21 (JDK 17 may work with a compatible Android Studio setup), Android SDK Platform 36, and an internet connection for Gradle dependencies.
+
+```bash
+git clone https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards.git
+cd AksharAi-GenZ-Keyboards
+cp .env.example .env # optional: add your own Groq/Gemini key; never commit .env
+./gradlew testDebugUnitTest
+./gradlew assembleDebug
 ```
-akshar-ai-keyboard/
-├── app/src/main/java/com/example/
-│   ├── ai/                      # Multi-provider AI (Groq, Gemini, Local Rule Engine)
-│   ├── data/
-│   │   ├── local/               # Room Database (ClipboardEntity, ClipboardDao)
-│   │   └── preferences/         # User settings (Themes, Haptics, Sound, Languages)
-│   ├── engine/
-│   │   ├── emoji/               # SentimentEmojiEngine & EmojiDictionary
-│   │   ├── nepali/              # DevanagariLayouts & NepaliTransliterationEngine
-│   │   ├── nepinglish/          # NepinglishEngine & GenZSlangDictionary
-│   │   ├── prediction/          # Next-word bigram & SuggestionItem pipeline
-│   │   └── swipe/               # SwipeTypingEngine & trajectory matching
-│   ├── ime/                     # NepaliInputMethodService (Android IME lifecycle)
-│   └── ui/
-│       ├── keyboard/            # KeyboardRootView, KeyView, SuggestionBar, Panels
-│       ├── screens/             # HomeScreen, ThemesScreen, Privacy, Settings
-│       └── theme/               # Material 3 Color Schemes & 7 Curated Presets
-```
 
----
+Debug output: `app/build/outputs/apk/debug/app-debug.apk`.
 
-## 🚀 Getting Started
+For an optimized release build, create and keep your own signing key private, then set `KEYSTORE_PATH`, `STORE_PASSWORD` and `KEY_PASSWORD` in your shell and run `./gradlew assembleRelease`. **Never put a signing key, API key, `.env` file or password in a commit or issue.** A personal release signature will not match the distributed v0.013 release key.
 
-### Prerequisites
-- Android Studio Ladybug (2024.2.1+) or newer
-- JDK 17 or JDK 21
-- Android SDK 35 (Android 15)
+## Privacy and AI
 
-### Build & Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/diwaskhatri07/akshar-ai-keyboard.git
-   cd akshar-ai-keyboard
-   ```
-2. Configure optional API keys:
-   ```bash
-   cp .env.example .env
-   # Edit .env and insert GROQ_API_KEY or GEMINI_API_KEY if desired
-   ```
-3. Run test suites:
-   ```bash
-   gradle :app:testDebugUnitTest
-   ```
-4. Assemble Debug APK:
-   ```bash
-   gradle :app:assembleDebug
-   ```
+Typing suggestions and transliteration are computed on-device. Settings, clipboard entries and opt-in AI history are stored locally by the app. If you choose an AI action and have a provider key configured, the selected text may be sent to Groq or Google Gemini over HTTPS; provider privacy/retention terms then apply. Without a working cloud key, the app can fall back to its local rule engine. Voice recognition is handled by the Android speech service you select. The custom API key is stored in app-private preferences and is not encrypted by the app itself. See [PRIVACY.md](PRIVACY.md) for scope and controls.
 
-### Enabling the Keyboard on Android
-1. Open **Android Settings** → **System** → **Languages & input** → **On-screen keyboard**.
-2. Tap **Manage on-screen keyboards** and toggle **Akshar Ai Keyboard** to **ON**.
-3. Tap **Change keyboard** (or keyboard icon on navigation bar) and select **Akshar Ai**.
+## Contributing
 
----
+Bug reports, Nepali dictionary improvements, translations, accessibility feedback, test cases and Kotlin/Compose contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). CI runs on pushes and pull requests. For a security issue, follow [SECURITY.md](SECURITY.md) and report it privately.
 
-## 🔒 Privacy Commitment
+## GitHub metrics and search data
 
-- **No Secret Logging**: Keystrokes are never transmitted or monetized.
-- **Password Protection**: Learning, suggestions, and AI are strictly disabled on password and PIN inputs.
-- **Local Storage**: All clipboard and settings data reside exclusively inside your device's isolated SQLite database.
-- Read our full [Privacy Policy](PRIVACY.md).
+The repository-metrics workflow refreshes public counters every **10 minutes** on a best-effort schedule. It records aggregate repository/release metrics in [`metrics/latest.json`](metrics/latest.json). GitHub may delay scheduled jobs, and its built-in traffic insights cover recent aggregate page views, clones and referrals—not named visitors or the exact search phrases people typed. To optionally collect traffic-graph data, add a fine-grained `TRAFFIC_API_TOKEN` repository secret with **Administration: read** access; without it the public metrics still refresh. See [the workflow notes](docs/github-metrics.md).
 
----
+**We cannot identify who searched GitHub for “Nepali keyboard” or retrieve GitHub search keywords.** No username-level visitor tracking is added to this repository.
 
-## 🗺️ Feature Roadmap
+## Project details
 
-- [x] Android InputMethodService baseline
-- [x] Romanized Nepali to Devanagari transliteration
-- [x] Gen-Z Nepali slang and phrase auto-expansion
-- [x] Gesture Swipe Typing with dual-script prediction
-- [x] Dynamic sentiment emoji suggestion strip
-- [x] Cloud AI (Groq + Gemini) with offline fallback
-- [x] Room Database Clipboard Manager with pin support
-- [ ] Multilingual voice typing with offline Vosk/Whisper model
-- [ ] User custom personal dictionary editor in settings
-- [ ] Cloud-free sticker and GIF picker integration
+- **App name:** Akshar AI - GenZ Keyboards
+- **Application ID:** `dev.aksharai.app`
+- **Current version:** `v0.013` (version code 13)
+- **Built with:** Kotlin, Jetpack Compose, Android InputMethodService, Room and Coroutines.
+- **Origin:** Made in Nepal 🇳🇵 by [Diwas Khatri](https://github.com/DiwasKhatri07).
+- **License:** [MIT](LICENSE).
 
----
+### GitHub topics
 
-## 👨‍💻 Author & Credits
-
-- **Creator & Lead Engineer**: [Diwas Khatri](https://github.com/diwaskhatri07)
-- **GitHub**: [@diwaskhatri07](https://github.com/diwaskhatri07)
-- **Email**: diwaskhatri935@gmail.com
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+`android` · `android-keyboard` · `android-ime` · `input-method-editor` · `nepali` · `nepal` · `nepali-language` · `nepali-keyboard` · `nepali-typing` · `nepinglish` · `roman-nepali` · `devanagari` · `genz` · `ai-keyboard` · `kotlin` · `jetpack-compose` · `swipe-typing` · `open-source` · `multilingual-keyboard` · `android-app`

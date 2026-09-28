@@ -22,6 +22,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "Akshar Ai - GenZ Keyboards"
+rootProject.name = "Akshar AI - GenZ Keyboards"
 
 include(":app")

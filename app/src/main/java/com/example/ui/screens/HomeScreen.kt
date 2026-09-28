@@ -170,7 +170,7 @@ fun HomeScreen(
                     Column {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Text(
-                                text = "Akshar Ai",
+                                text = "Akshar AI",
                                 color = Color.White,
                                 fontSize = 22.sp,
                                 fontWeight = FontWeight.ExtraBold
@@ -245,7 +245,7 @@ fun HomeScreen(
                             onClick = {
                                 if (typedText.isNotBlank()) {
                                     val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                                    cm.setPrimaryClip(ClipData.newPlainText("Aayo Text", typedText))
+                                    cm.setPrimaryClip(ClipData.newPlainText("Akshar AI Text", typedText))
                                     Toast.makeText(context, "Copied to clipboard!", Toast.LENGTH_SHORT).show()
                                 }
                             },
@@ -512,14 +512,14 @@ fun HomeScreen(
                         onCopy = {
                             if (typedText.isNotBlank()) {
                                 val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                                cm.setPrimaryClip(ClipData.newPlainText("Aayo Text", typedText))
+                                cm.setPrimaryClip(ClipData.newPlainText("Akshar AI Text", typedText))
                                 Toast.makeText(context, "Copied!", Toast.LENGTH_SHORT).show()
                             }
                         },
                         onCut = {
                             if (typedText.isNotBlank()) {
                                 val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                                cm.setPrimaryClip(ClipData.newPlainText("Aayo Text", typedText))
+                                cm.setPrimaryClip(ClipData.newPlainText("Akshar AI Text", typedText))
                                 typedText = ""
                                 Toast.makeText(context, "Cut to clipboard!", Toast.LENGTH_SHORT).show()
                             }
@@ -571,7 +571,7 @@ fun HomeScreen(
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Enable Aayo Keyboard to use it across WhatsApp, TikTok, Chrome, and all Android apps.",
+                    text = "Enable Akshar AI GenZ Keyboard to use it across your Android apps.",
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -608,7 +608,7 @@ fun HomeScreen(
                         },
                         modifier = Modifier.weight(1f)
                     ) {
-                        Text(if (isKeyboardSelected) "2. Selected ✓" else "2. Switch to Aayo", fontSize = 11.sp)
+                        Text(if (isKeyboardSelected) "2. Selected ✓" else "2. Switch to Akshar", fontSize = 11.sp)
                     }
                 }
             }

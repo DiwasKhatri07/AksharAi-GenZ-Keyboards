@@ -1,35 +1,15 @@
-# Security Policy
+# Security policy
 
-## Supported Versions
+## Supported release
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x.x   | :white_check_mark: |
+The latest published APK is the version listed on the [Releases page](https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards/releases). Please use the latest release when reporting a vulnerability.
 
-## Security Guarantees & Architecture
+## Important security notes
 
-**Akshar Ai - GenZ Keyboards** is built with strict privacy and security standards:
+Akshar AI is an Android input method. A keyboard receives text that users type into other apps. The current code processes normal typing suggestions and transliteration on-device and only sends text to a cloud AI provider when an AI action is invoked and a provider key is available. Android-recognized password input types suppress keyboard suggestions and clipboard capture. These safeguards depend on correct editor metadata and are not a guarantee for every sensitive field. Numeric AI checks are heuristic and incomplete.
 
-1. **Zero Secret Logging**:
-   - The keyboard NEVER runs background keyloggers.
-   - Normal keystrokes and typing sequences remain completely on device memory and are never uploaded to remote servers.
+Clipboard entries, preferences and optional AI history are stored locally. Custom AI API keys are stored in app-private preferences but are not encrypted by the app. Use a test key with minimum provider permissions and revoke it if exposed. Do not publish personal text, API keys or signing material in issues or pull requests.
 
-2. **Password & OTP Shielding**:
-   - In accordance with Android IME security standards, all password, PIN, and numeric credential fields (`TYPE_TEXT_VARIATION_PASSWORD`, `TYPE_TEXT_VARIATION_WEB_PASSWORD`, `TYPE_NUMBER_VARIATION_PASSWORD`) immediately disable text caching, suggestions, autocorrect, and AI writing prompts.
+## Report a vulnerability privately
 
-3. **Explicit AI Processing Only**:
-   - Text is ONLY passed to LLM endpoints (Groq / Gemini) when the user explicitly triggers an AI action button in the AI toolbar.
-   - User inputs are never shared with unauthorized third parties or used to train public models.
-
-4. **Local SQLite Storage**:
-   - Clipboard entries and saved personal words are stored exclusively on the device using an encrypted/isolated Room SQLite database (`aayo_keyboard.db`).
-
-## Reporting a Vulnerability
-
-If you discover a security vulnerability within Akshar Ai, please report it privately:
-
-- **Maintainer**: Diwas Khatri
-- **GitHub**: [@diwaskhatri07](https://github.com/diwaskhatri07)
-- **Email**: diwaskhatri935@gmail.com
-
-Please do not publicly disclose the issue until it has been reviewed and addressed.
+Please do not open a public issue containing an exploitable vulnerability or private user data. Contact maintainer [Diwas Khatri](https://github.com/DiwasKhatri07) via a GitHub private vulnerability report if enabled for this repository, or by email at `diwaskhatri935@gmail.com`. Include the affected release/commit, impact and a minimal reproduction. Allow time to investigate before public disclosure.

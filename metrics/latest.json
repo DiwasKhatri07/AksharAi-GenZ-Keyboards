@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "repository": {
+    "name": "DiwasKhatri07/AksharAi-GenZ-Keyboards",
+    "url": "https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards",
+    "description": "Open-source Nepali, Nepinglish and English Gen-Z Android keyboard with optional AI writing tools. Made in Nepal.",
+    "default_branch": "main",
+    "stars": 0,
+    "forks": 0,
+    "open_items_including_pull_requests": 0,
+    "watchers": 0,
+    "topics": [
+      "ai-keyboard",
+      "android",
+      "android-app",
+      "android-ime",
+      "android-keyboard",
+      "devanagari",
+      "genz",
+      "input-method-editor",
+      "jetpack-compose",
+      "kotlin",
+      "multilingual-keyboard",
+      "nepal",
+      "nepali",
+      "nepali-keyboard",
+      "nepali-language",
+      "nepali-typing",
+      "nepinglish",
+      "open-source",
+      "roman-nepali",
+      "swipe-typing"
+    ]
+  },
+  "latest_release": {
+    "tag": null,
+    "published_at": null,
+    "asset_downloads": 0,
+    "assets": []
+  },
+  "traffic_14_days": null,
+  "notes": [
+    "Aggregate repository/release counts only; no visitor identities or GitHub search queries are available here.",
+    "GitHub traffic is optional and requires a TRAFFIC_API_TOKEN secret with Administration: read permission.",
+    "GitHub API traffic graphs cover a rolling 14-day window and may be delayed."
+  ],
+  "last_updated_utc": "2026-09-28T03:04:16+00:00"
+}
