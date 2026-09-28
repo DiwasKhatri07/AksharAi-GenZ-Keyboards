@@ -3,7 +3,8 @@ name: Feature request
 about: Suggest an idea or new vocabulary for Akshar Ai
 title: "[FEATURE] "
 labels: enhancement
-assignees: diwaskhatri07
+assignees: DiwasKhatri07
+
 ---
 
 **Is your feature request related to a problem? Please describe.**

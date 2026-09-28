@@ -3,7 +3,8 @@ name: Bug report
 about: Create a report to help us improve Akshar Ai
 title: "[BUG] "
 labels: bug
-assignees: diwaskhatri07
+assignees: DiwasKhatri07
+
 ---
 
 **Describe the bug**
