@@ -1,0 +1,6 @@
+{
+  "name": "Akshar Ai - GenZ Keyboards",
+  "description": "Smart Nepali & Nepinglish Gen-Z AI Keyboard with gesture swipe typing, intelligent transliteration, AI writing modes, custom themes, clipboard manager, and voice typing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

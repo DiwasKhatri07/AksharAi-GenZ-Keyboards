@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.example.MainActivity"
+    android:icon="@mipmap/ic_launcher"
+    android:supportsSwitchingToNextInputMethod="true">
+    <subtype
+        android:label="Nepali (नेपाली)"
+        android:imeSubtypeLocale="ne_NP"
+        android:imeSubtypeMode="keyboard" />
+    <subtype
+        android:label="Nepinglish (Roman)"
+        android:imeSubtypeLocale="ne_NP"
+        android:imeSubtypeMode="keyboard" />
+    <subtype
+        android:label="English"
+        android:imeSubtypeLocale="en_US"
+        android:imeSubtypeMode="keyboard" />
+</input-method>
