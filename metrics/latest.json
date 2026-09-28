@@ -33,10 +33,23 @@
     ]
   },
   "latest_release": {
-    "tag": null,
-    "published_at": null,
+    "tag": "v0.013",
+    "published_at": "2026-09-28T03:19:36Z",
     "asset_downloads": 0,
-    "assets": []
+    "assets": [
+      {
+        "name": "AksharAI-GenZ-Keyboards-v0.013-debug.apk",
+        "downloads": 0
+      },
+      {
+        "name": "AksharAI-GenZ-Keyboards-v0.013-release.apk",
+        "downloads": 0
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "downloads": 0
+      }
+    ]
   },
   "traffic_14_days": null,
   "notes": [
@@ -44,5 +57,5 @@
     "GitHub traffic is optional and requires a TRAFFIC_API_TOKEN secret with Administration: read permission.",
     "GitHub API traffic graphs cover a rolling 14-day window and may be delayed."
   ],
-  "last_updated_utc": "2026-09-28T03:04:16+00:00"
+  "last_updated_utc": "2026-09-28T03:19:58+00:00"
 }
