@@ -35,7 +35,7 @@
   "latest_release": {
     "tag": "v0.013",
     "published_at": "2026-09-28T03:19:36Z",
-    "asset_downloads": 0,
+    "asset_downloads": 2,
     "assets": [
       {
         "name": "AksharAI-GenZ-Keyboards-v0.013-debug.apk",
@@ -47,7 +47,7 @@
       },
       {
         "name": "SHA256SUMS.txt",
-        "downloads": 0
+        "downloads": 2
       }
     ]
   },
@@ -57,5 +57,5 @@
     "GitHub traffic is optional and requires a TRAFFIC_API_TOKEN secret with Administration: read permission.",
     "GitHub API traffic graphs cover a rolling 14-day window and may be delayed."
   ],
-  "last_updated_utc": "2026-09-28T03:19:58+00:00"
+  "last_updated_utc": "2026-09-28T09:50:21+00:00"
 }
