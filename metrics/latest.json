@@ -5,7 +5,7 @@
     "url": "https://github.com/DiwasKhatri07/AksharAi-GenZ-Keyboards",
     "description": "Open-source Nepali, Nepinglish and English Gen-Z Android keyboard with optional AI writing tools. Made in Nepal.",
     "default_branch": "main",
-    "stars": 0,
+    "stars": 1,
     "forks": 0,
     "open_items_including_pull_requests": 0,
     "watchers": 0,
@@ -57,5 +57,5 @@
     "GitHub traffic is optional and requires a TRAFFIC_API_TOKEN secret with Administration: read permission.",
     "GitHub API traffic graphs cover a rolling 14-day window and may be delayed."
   ],
-  "last_updated_utc": "2026-09-28T09:50:21+00:00"
+  "last_updated_utc": "2026-10-06T15:17:29+00:00"
 }
